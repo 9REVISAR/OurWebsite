@@ -12,7 +12,7 @@ body{
   padding: 0 10px;
   justify-content: center;
   min-height: 100vh;
-  background: lightblue;
+  background: blue;
 }
 .wrapper{
   width: 450px;
