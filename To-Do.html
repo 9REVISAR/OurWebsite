@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Computer Group 1</title>
 </head>
 <body style="background-color:#0683D7;">
@@ -70,22 +69,10 @@ body {
 <body>
 
 <div class="header">
-  <a href="#default" class="logo"><MARQUEE>Welcome to 9REVISAR!</MARQUEE></a>
+  <a href="#default" class="logo"><MARQUEE>WELCOME TO OUR WEBSITE!</MARQUEE></a>
   
   <div class="header-right">
     
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-
-<body>
-
-  
-<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-  <input type="text" placeholder="Search.." name="search2">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
 
 </body>
 </html> 
@@ -109,7 +96,7 @@ body {
   width: 0;
   position: fixed;
   z-index: 1;
-  top: 152.5px;
+  top: 107.5px;
   left: 0;
   background-color: #ffb703;
   overflow-x: hidden;
@@ -121,13 +108,13 @@ body {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: white;
+  color: #818181;
   display: block;
   transition: 0.3s;
 }
 
 .sidebar a:hover {
-  color: black;
+  color: #f1f1f1;
 }
 
 .sidebar .closebtn {
@@ -143,8 +130,8 @@ body {
   cursor: pointer;
   background-color:#023047;
   color: white;
-  padding: 5px 665px;
-  border: 100%;
+  padding: 10px 60px;
+  border: none;
 }
 
 .openbtn:hover {
@@ -166,7 +153,7 @@ body {
 <body>
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="https://jillianevoe.github.io/group1/">Main</a>
+  <a href="https://jillianevoe.github.io/group1/index.html">Main</a>
   <a href="https://jillianevoe.github.io/group1/Subjects.html">Subjects</a>
   <a href="https://jillianevoe.github.io/group1/To-Do.html">To-Do List</a>
   <a href="https://jillianevoe.github.io/group1/ComingSoon.html">Calendar</a>
@@ -181,12 +168,12 @@ body {
 <script>
 function openNav() {
   document.getElementById("mySidebar").style.width = "200px";
-  document.getElementById("To-Do List").style.marginLeft = "0px";
+  document.getElementById("main").style.marginLeft = "0px";
 }
 
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("To-Do List").style.marginLeft= "0";
+  document.getElementById("main").style.marginLeft= "0";
 }
 </script>
 
@@ -197,186 +184,94 @@ function closeNav() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  margin: 0;
-  min-width: 250px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Include the padding and border in an element's total width and height */
 * {
   box-sizing: border-box;
 }
 
-/* Remove margins and padding from the list */
-ul {
-  margin: 0;
-  padding: 0;
+/* Create a column layout with Flexbox */
+.row {
+  display: scroll;
 }
 
-/* Style the list items */
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  list-style-type: none;
-  background: #0683D7;
+/* Right column (page content) */
+.right {
+  flex: 100%;
+  padding: 1px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
   font-size: 18px;
-  transition: 0.2s;
-  
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  padding: 11px;
+  border: 1px solid #ddd;
 }
 
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #8D3FD0;
-}
-
-/* Darker background-color on hover */
-ul li:hover {
-  background: #ddd;
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #ED3D63;
-  color: #fff;
-  text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-
-
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the input */
-input {
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
 }
 
-/* Style the "Add" button */
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #223CCF;
-  color: white;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+  
 }
 
-.addBtn:hover {
-  background-color: #161B7F;
+#myMenu li a:hover {
+  background-color: #8ecae6;
 }
 </style>
 </head>
 <body>
 
-<div id="myDIV" class="header">
-  <h2 style="margin:5px">To Do List</h2>
-  <input type="text" id="myInput" placeholder="Title...">
-  <span onclick="newElement()" class="addBtn">Add</span>
+<div class="row">
+  <div class="left" style="background-color:#fb8500;">
+    <h1><marquee>SUBJECTS</marquee></h1>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="https://docs.google.com/presentation/d/1NQom2wCe6a1V_pHI_B8m4LLm05HL2OKn/edit?usp=drive_link&ouid=103849171401289707641&rtpof=true&sd=true">FILIPINO-Pagtatalumpati</a></li>
+      <li><a href="https://drive.google.com/file/d/1KJ_-pnFDdWnxvHXs9mEmpxztgxaL8uRN/view?usp=drive_link">TLE-Cooking Equipment,Procedures in cleaning</a></li>
+      <li><a href="https://docs.google.com/presentation/d/1UBnDEv462X1dbgwgsnOwPpfJ34On1Dn-/edit?usp=drive_link&ouid=103849171401289707641&rtpof=true&sd=true">SCIENCE-Genetic Disorder</a></li>
+      <li><a href="https://docs.google.com/presentation/d/1QysbhsGSlec6gGsRYiYzhHvKvoprTCHN/edit?usp=drive_link&ouid=103849171401289707641&rtpof=true&sd=true">FILIPINO-Pang-Uri</a></li>
+      <li><a href="https://docs.google.com/presentation/d/12wIxh_AMeUo3gfirjQgRbYjXET8G2isK/edit?usp=drive_link&ouid=103849171401289707641&rtpof=true&sd=true">FILIPINO-Elihiya </a></li>
+      <li><a href="https://drive.google.com/file/d/1KIbQ1gSmqYU_QXOQf9T581WHL3GjVuja/view?usp=drivesdk">AP EKONOMIKS-Inflation Reviewer</a></li>
+      <li><a href="https://drive.google.com/file/d/1KDltfP1SMSlp9SvqA1ZibUDUdl2I-Qmw/view?usp=drivesdk">ENGLISH-Shakespearean Sonnet</a></li>
+      <li><a href="https://drive.google.com/file/d/1KDeFG4XZ2Kndud4eJ2gZxgkG7cgr9LPH/view?usp=drivesdk">AP EKONOMICS-Alokasyon</a></li>
+      <li><a href="https://docs.google.com/presentation/d/1JvO-GCdU7TMWAYGCbzM4w6WvJEq-Ni7b/edit?usp=drive_link&ouid=103849171401289707641&rtpof=true&sd=true">FILIPINO-Pabula</a></li>
+      <li><a href="https://docs.google.com/presentation/d/1-CvHCTg-zs6xdZC7NmoOgPGUD3E_I96_/edit?usp=drive_link&ouid=103849171401289707641&rtpof=true&sd=true">TLE-Hand Spa Treatment</a></li>
+      <li><a href="https://drive.google.com/file/d/1KJ_-pnFDdWnxvHXs9mEmpxztgxaL8uRN/view?usp=drive_link">TLE-Salads Reviewer</a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href="https://docs.google.com/document/d/1KJokqZTsVK3LVSvNNo4vvPUML141kSyd/edit?usp=drivesdk&ouid=103849171401289707641&rtpof=true&sd=true">SCIENCE-Volcanoes</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#023047;">
+  </div>
 </div>
 
-<ul id="myUL">
-  
-</ul>
-
 <script>
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
     }
   }
 }
@@ -384,7 +279,5 @@ function newElement() {
 
 </body>
 </html>
-
 </body>
-
 </html>
