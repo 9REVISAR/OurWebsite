@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SCA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  background-image: url('https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/416524380_1482426015821697_2298401689094588280_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeG_m0vLVHxhCrF6fHx3L4gsFpjpaHg918cWmOloeD3Xx_WdClf9J5hwuyfW2hGOTS9qo-c3jbd3Fs-2WuBlZrmP&_nc_ohc=Zg_tOiUa5VsAX9kcflm&_nc_ht=scontent.fcrk1-3.fna&oh=03_AdTYCsZAfKo4Cmz02aE0V_PCcDhoaqwxIRHTxZrbt4sLyQ&oe=65E1CDA1');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+  margin:0;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 33%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height:100%;
+  border: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 106px;
+  left: 0;
+  background-color: #ffb703;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 80px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color:#023047;
+  color: white;
+  padding: 10px 60px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #219ebc;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 0px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+/* Style the header */
+header {
+  text-align: center;
+  font-size: 40px;
+  overflow: hidden;
+  background-color:#219ebc;
+  padding: 24.5px 10px;
+  
+}
+  
+.header a {
+  position: fixed;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 0px; 
+  line-height: 25px;
+  border-radius: 100px;
+}
+
+.header a.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+  
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: auto;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  background-color: #f1f1f1;
+  height: 100%; 
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ 
+/* Style the footer */
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #219ebc;
+   color: black;
+   text-align: center;
+  }
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+ 
+</style>
+
+</head>
+<body>
+
+    <header>
+        <a  href="#default" class="logo"><MARQUEE id ="mymarquee">WELCOME TO 9REVISAR!</MARQUEE></a>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a onclick ="home()">Home</a>
+      <a onclick ="subject()">Subjects</a>
+      <a onclick ="todolist()">To-Do List</a>
+      <a onclick ="calendar()">Calendar</a>
+      <a onclick ="aboutus()" >About Us</a>
+      <a onclick = "credits()">Credits</a>
+    </div>
+
+    <div id="main">
+     <button class="openbtn" onclick="openNav()">☰ Menu</button>  
+    </div>
+  
+  <div class="container">
+  <iframe id="myframe" class="responsive-iframe"></iframe>
+  </div>
+  
+     <footer style="height:50px;text-align:center;padding:.5px">
+     <p>Copyright © 2024 9REVISAR - All Rights Reserved</p>
+     </footer>
+   
+  
+</body>
+
+<script>
+   function openNav() {
+      document.getElementById("mySidebar").style.width = "200px";
+      document.getElementById("main").style.marginLeft = "0px";
+    }
+
+   function closeNav() {
+     document.getElementById("mySidebar").style.width = "0";
+     document.getElementById("main").style.marginLeft= "0";
+   }
+  
+    function subject() {  
+     document.getElementById("myframe").src="https://jillianevoe.github.io/group1/sub.html";
+     closeNav();
+   }
+
+  function todolist(){ 
+    document.getElementById("myframe").src="https://jillianevoe.github.io/group1/To-Do.html"
+    closeNav();
+   }
+
+  function calendar(){
+   document.getElementById("myframe").src="lynx_landing.png"
+    closeNav();
+   }
+
+  function aboutus(){
+   document.getElementById ("myframe").src="img_avatar2.png"
+    closeNav();
+   }
+
+  function credits(){
+   document.getElementById("myframe").src="jillianevoe.github.io/group1/comingsoon.html"
+   document.getElementById("myheader").style.color = "blue"; 
+   closeNav();
+  }
+
+</script>
+</html>
+
