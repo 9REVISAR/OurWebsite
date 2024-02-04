@@ -225,30 +225,36 @@ footer {
    }
 
     function home() {
-    document.getElementById("myframe").style.display= "none";
+    document.getElementById("myframe").style.visibility= "hidden";
+    closeNav();
    }
   
     function subject() {  
+      document.getElementById("myframe").style.visibility= "visible";
      document.getElementById("myframe").src="https://jillianevoe.github.io/group1/sub.html";
      closeNav();
    }
 
-  function todolist(){ 
+  function todolist(){
+    document.getElementById("myframe").style.visibility= "visible";    
     document.getElementById("myframe").src="https://9revisar.github.io/To-Do.html"
     closeNav();
    }
 
   function calendar(){
+    document.getElementById("myframe").style.visibility= "visible";
    document.getElementById("myframe").src="lynx_landing.png"
     closeNav();
    }
 
   function aboutus(){
+    document.getElementById("myframe").style.visibility= "visible";
    document.getElementById ("myframe").src="img_avatar2.png"
     closeNav();
    }
 
   function credits(){
+    document.getElementById("myframe").style.visibility= "visible";
    document.getElementById("myframe").src="jillianevoe.github.io/group1/comingsoon.html"
    document.getElementById("myheader").style.color = "blue"; 
    closeNav();
