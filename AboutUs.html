@@ -1,97 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+       <h1>About Us</h1>
+    </head>
 <style>
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
-
-/* Style the tab */
-.tab {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 15%;
-  height: 600px;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  float: left;
-  padding: 0px 12px;
-  border: 1px solid #ccc;
-  width: 85%;
-  border-left: none;
-  height: 600px;
+body {
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
 }
 </style>
-</head>
-<body>
-
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Mission')" id="defaultOpen">Our Mission</button>
-  <button class="tablinks" onclick="openCity(event, 'Vision')">Our Vision</button>
-  <button class="tablinks" onclick="openCity(event, 'About Us')">About Us</button>
-</div>
-
-<div id="Mission" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Vision" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="About Us" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-   
-</body>
-</html> 
+    <body>
+      <h3>9REVISAR© is a website made by a talented group of Grade 9 students of SY.2023-2024 that aims to help future Grade 9 students to have a fun and easier way of learning.</h3>
+      <h3>We offer a variety of presentations, reviewers, and videos for different kinds of school subjectys that can help ease the task of studying, taking notes, and reviewing for upcomiong quizzes or exams.</h3>
+      <h3>We, who personally has experienced what it's like being confuised with all the different subject lectures, would like you to experience a more organized way of learning.
+        we aim to make studying more fun and easier by making a website where EVERYTHING you need regarding academics is there, including lectures, a to-do list, and many more to be added!
+        Studying can be easy as one button click away.</h3>
+      <h3>So we welcome you with open arms!
+        To help you open doors, opportunities, and study with ease. Welcome to 9REVISAR©!</h3>
+      <h1>Our Mission</h1>
+      <h3>Our mission at 9REVISAR© is to help Grade 9 students with organization of notes, assignments, and reviewers.
+      Our mission is to help lessen the confusion and stress of studying.
+      We aspire to deliver a reliable, user-friendly website that helps with learning to not only save time but to also confidently walk into your classroom well informed for an upcoming quiz!
+     </h3>
+      <h1>Our Vision</h1>
+      <h3>We'd like to make a website where all your ascademic needs can be solved in one website.
+         Our Vision is to be a Website where future Grade 9 students can study easier, to inspire them to learn due to accessibility of lectures.
+        We envision a platform that not only promotes academic success but also provides future Grade 9 students with knowledge, and a desire for continuous improvement.</h3>
+   </body>
+</html>
