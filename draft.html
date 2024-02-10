@@ -207,15 +207,16 @@ footer {
      <button class="openbtn" onclick="openNav()">☰ Menu</button>  
     </div>
   
+   <div class="container">
+  <iframe id="myframe" class="responsive-iframe"></iframe>
+  </div>
+  
   <div id="home" class="home">
   <p style="font-size:45px;"><strong>A website made by students, for students.</strong></p>
 
 <p style="font-size: 35px;">Learning made easier!</p>
   </div>
-  <div class="container">
-  <iframe id="myframe" class="responsive-iframe"></iframe>
-  </div>
-  
+ 
      <footer style="height:50px;text-align:center;padding:.5px">
      <p>Copyright © 2024 9REVISAR - All Rights Reserved</p>
      </footer>
@@ -266,7 +267,6 @@ footer {
   function credits(){
     document.getElementById("myframe").style.visibility= "visible";
    document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/Credits.html"
-   document.getElementById("myheader").style.color = "blue"; 
    closeNav();
   }
 
