@@ -9,12 +9,19 @@
 * {box-sizing: border-box;}
 
 body {
-  background-image: url('https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/416524380_1482426015821697_2298401689094588280_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeG_m0vLVHxhCrF6fHx3L4gsFpjpaHg918cWmOloeD3Xx_WdClf9J5hwuyfW2hGOTS9qo-c3jbd3Fs-2WuBlZrmP&_nc_ohc=Zg_tOiUa5VsAX9kcflm&_nc_ht=scontent.fcrk1-3.fna&oh=03_AdTYCsZAfKo4Cmz02aE0V_PCcDhoaqwxIRHTxZrbt4sLyQ&oe=65E1CDA1');
+  background-image: url('');
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-size: 100% 100%;
+  background-color: #8ecae6;
   margin:0;
 }
+
+ .home {
+ padding: 80px 0px;
+ margin: 0;
+ font-family: courier;
+ }
 
 .container {
   position: absolute;
@@ -111,7 +118,8 @@ header {
   text-align: center;
   padding: 20px;
   text-decoration: none;
-  font-size: 0px; 
+  font-size: 0px;
+  font family: arial black;
   line-height: 25px;
   border-radius: 100px;
 }
@@ -124,11 +132,6 @@ header {
 .header a:hover {
   background-color: #ddd;
   color: black;
-}
-
-.header a.active {
-  background-color: black;
-  color: white;
 }
 
 .header-right {
@@ -187,7 +190,7 @@ footer {
 <body>
 
     <header>
-        <a  href="#default" class="logo"><MARQUEE id ="mymarquee">WELCOME TO 9REVISAR!</MARQUEE></a>
+        <a class="logo"><MARQUEE><strong>WELCOME TO 9REVISAR!</strong></MARQUEE></a>
     </header>
 
     <div id="mySidebar" class="sidebar">
@@ -204,10 +207,16 @@ footer {
      <button class="openbtn" onclick="openNav()">☰ Menu</button>  
     </div>
   
-  <div class="container">
+   <div class="container">
   <iframe id="myframe" class="responsive-iframe"></iframe>
   </div>
   
+  <div id="home" class="home">
+  <p style="font-size:45px;"><strong>A website made by students, for students.</strong></p>
+
+<p style="font-size: 35px;">Learning made easier!</p>
+  </div>
+ 
      <footer style="height:50px;text-align:center;padding:.5px">
      <p>Copyright © 2024 9REVISAR - All Rights Reserved</p>
      </footer>
@@ -258,10 +267,8 @@ footer {
   function credits(){
     document.getElementById("myframe").style.visibility= "visible";
    document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/Credits.html"
-   document.getElementById("myheader").style.color = "blue"; 
    closeNav();
   }
 
 </script>
 </html>
-
