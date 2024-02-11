@@ -11,8 +11,9 @@
 body {
   background-image: url("");
   background-repeat: no-repeat;
-  background-position: 100% 10%; 
+  background-position: 100% 10%;
   background-size: 30% 100%;
+  height: 100%;
   background-color: #8ecae6;
   margin:0;
 }
@@ -24,7 +25,7 @@ body {
  }
 
 .container {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 1050%;
   overflow: scroll;
@@ -114,6 +115,7 @@ body {
 
 /* Style the header */
 header {
+  position: auto;
   text-align: center;
   font-size: 40px;
   overflow: hidden;
@@ -198,11 +200,11 @@ footer {
   }
  
 </style>
-<body>
-
+  
     <header>
         <a class="logo"><MARQUEE><strong>WELCOME TO 9REVISAR!</strong></MARQUEE></a>
     </header>
+<body>
 
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -225,7 +227,7 @@ footer {
   <div id="home" class="home">
   <p style="font-size:45px;"><strong>A website made by students, for students.</strong></p>
 
-<p style="font-size: 35px; padding: 100px 100px;">Learning made easier!</p>
+<p style="font-size: 35px;">Learning made easier!</p>
   </div>
  
      <footer style="height:50px;text-align:center;padding:.5px">
