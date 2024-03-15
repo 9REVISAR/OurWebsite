@@ -212,6 +212,7 @@ footer {
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       <a onclick ="home()">Home</a>
+      <a onclick ="howto()">How To</a>
       <a onclick ="subject()">Subjects</a>
       <a onclick ="todolist()">To-Do List</a>
       <a onclick ="calendar()">Calendar</a>
@@ -255,6 +256,12 @@ footer {
     document.getElementById("myframe").style.visibility= "hidden";
     closeNav();
    }
+  
+    function howto(){
+    document.getElementById("myframe").style.visibility= "visible";
+   document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/ComingSoon.html"
+   closeNav();
+  }
   
     function subject() {  
       document.getElementById("myframe").style.visibility= "visible";
