@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+  Header{
+    background-color: #8ecae6;
+    height: 10%;
+    font-family: arialblack;
+    color: black;    
+}
+  
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #8ecae6;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #ffb703;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}  
+  
+#Home {background-color: #ffb703;}
+#News {background-color: #ffb703;}
+#Contact {background-color: #ffb703;}
+#About {background-color: #ffb703;}
+</style>
+
+<head>
+<header>
+  <h1><marquee><strong>HOW TO?</strong></marquee></h1>
+</header>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('News', this, '#ffb703')"><strong>Use Subjects</strong></button>
+<button class="tablink" onclick="openPage('Contact', this, '#ffb703')"><strong>Use the To-Do list</strong></button>
+  <button class="tablink" onclick="openPage('Home', this, '#ffb703')"><strong>Contact Us</strong></button>
+<button class="tablink" onclick="openPage('About', this, '#ffb703')" id="defaultOpen"><strong>Share with your Friends!</strong></button>
+
+<div id="News" class="tabcontent">
+  <h1>How to use the Subjects panel?</h1>
+  <p>how</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h1>How to use the To-Do list?</h1>
+  <p>how</p>
+</div>
+
+  <div id="Home" class="tabcontent">
+  <h1>How to Contact Us?</h1>
+    <img src="revvyclean.png" background-repeat="no-repeat"; background-position="right-top"; margin-right="200px";
+    <h3>9 Revisar is constantly undergoing updates.</h3>
+    <p>Our team is always thinking of new and better ways to help users like you, to achieve a fun and easy way of learning.</p>
+    <p>With that, we would really appreciate your comments, and suggestions that can help make our website more user friendly.</p>
+    <p>You can reach out to us and send your suggestions using the following platforms:</p>
+    <h2>Chat us through <a href="https://www.facebook.com/profile.php?id=61557354482883&mibextid=LQQJ4d">Facebook-Messenger</a>!</h2>
+    <h2>Or send us an Email through our Gmail account: 9revisar.official@gmail.com</h2>     
+  </div>
+
+<div id="About" class="tabcontent">
+  <h1>How to share to your Friends?</h1>
+  <p>how</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
