@@ -237,7 +237,7 @@ footer {
   </div>
 
 <div>
-<audio controls autoplay loop>
+<audio id="music" autoplay loop>
 <source src="bgmusic.mp3">
 </audio>
 </div>  
@@ -252,6 +252,9 @@ footer {
    function openNav() {
       document.getElementById("mySidebar").style.width = "200px";
       document.getElementById("main").style.marginLeft = "0px";
+    var x = document.getElementById("music");x
+  x.play();    
+     
     }
 
    function closeNav() {
