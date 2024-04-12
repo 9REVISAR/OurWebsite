@@ -212,8 +212,6 @@ footer {
 
 <body>
 
-<iframe src="bgmusic.mp3" height="0px">
-
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       <a onclick ="home()">Home</a>
@@ -231,7 +229,12 @@ footer {
    <div class="container">
   <iframe id="myframe" class="responsive-iframe"></iframe>
   </div>
-  
+
+<div>
+<audio controls autoplay loop>
+<source src="bgmusic.mp3">
+</audio>
+</div>  
 
   <div id="home" class="home">
   <p style="font-size:45px;"><strong>A website made by students, for students.</strong></p>
@@ -296,6 +299,7 @@ footer {
    document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/Credits.html"
    closeNav();
   }
+
 
 </script>
 </html>
