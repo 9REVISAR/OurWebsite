@@ -236,7 +236,7 @@ footer {
 <p style="font-size: 35px;">Learning made easier!</p>
   </div>
 
-<div>
+<div hidden>
 <audio id="music" autoplay loop>
 <source src="bgmusic.mp3">
 </audio>
@@ -250,13 +250,11 @@ footer {
 
 <script>
 
-  var x = document.getElementById("music");
-  x.play();
-
    function openNav() {
       document.getElementById("mySidebar").style.width = "200px";
       document.getElementById("main").style.marginLeft = "0px";
-        
+        var x = document.getElementById("music");
+  x.play();  
      
     }
 
