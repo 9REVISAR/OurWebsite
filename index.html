@@ -264,12 +264,10 @@ footer {
 <script>
     var mainmusic = document.getElementById("mainmusic"); 
 
-    var submusic = document.getElementById("submusic");
-
-    var creditmusic = document.getElementById("creditmusic");
-  
+    var submusic = document.getElementById("submusic")  
     submusic.pause();
 
+    var creditmusic = document.getElementById("creditmusic");
     creditmusic.pause();
   
    function openNav() {
@@ -291,6 +289,7 @@ footer {
     document.getElementById("myframe").style.visibility= "hidden";
     closeNav();
     submusic.pause();
+    creditmusic.pause();
    }
   
     function howto(){
@@ -306,6 +305,7 @@ footer {
      document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/Subjects.html";
      closeNav();
     mainmusic.pause();
+    creditmusic.pause();
     submusic.play();
     
    }
@@ -315,6 +315,7 @@ footer {
     document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/To-Do"
     closeNav();
     submusic.pause();
+    creditmusic.pause();
    }
 
   function googledino(){
@@ -322,6 +323,7 @@ footer {
    document.getElementById("myframe").src="chrome://dino/"
     closeNav();
     submusic.pause();
+    creditmusic.pause();
    }
 
   function aboutus(){
@@ -329,6 +331,7 @@ footer {
    document.getElementById ("myframe").src="https://9revisar.github.io/OurWebsite/AboutUs.html"
     closeNav();
     submusic.pause();
+    creditmusic.pause();
    }
 
   function credits(){
