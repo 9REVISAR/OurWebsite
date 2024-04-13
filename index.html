@@ -242,6 +242,12 @@ footer {
 </audio>
 </div>
 
+<div hidden>
+<audio id="submusic" autoplay loop>
+<source src="cafe.mp3">
+</audio>
+</div>
+
      <footer style="height:50px;text-align:center;padding:.5px">
      <p>© 2024 9REVISAR - All Rights Reserved</p>
      </footer>
@@ -267,42 +273,52 @@ footer {
     function home() {
     document.getElementById("myframe").style.visibility= "hidden";
     closeNav();
+    mainmusic.play();
    }
   
     function howto(){
     document.getElementById("myframe").style.visibility= "visible";
    document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/howto.html"
    closeNav();
+   mainmusic.play();
   }
   
     function subject() {  
       document.getElementById("myframe").style.visibility= "visible";
      document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/Subjects.html";
      closeNav();
+    var submusic = document.getElementById("submusic");
+    submusic.play();
+    mainmusic.pause();
+
    }
 
   function todolist(){
     document.getElementById("myframe").style.visibility= "visible";    
     document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/To-Do"
     closeNav();
+    mainmusic.play();
    }
 
   function calendar(){
     document.getElementById("myframe").style.visibility= "visible";
    document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/ComingSoon.html"
     closeNav();
+    mainmusic.play();
    }
 
   function aboutus(){
     document.getElementById("myframe").style.visibility= "visible";
    document.getElementById ("myframe").src="https://9revisar.github.io/OurWebsite/AboutUs.html"
     closeNav();
+    mainmusic.play();
    }
 
   function credits(){
     document.getElementById("myframe").style.visibility= "visible";
    document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/Credits.html"
    closeNav();
+   mainmusic.play();
   }
 
   function init(){
