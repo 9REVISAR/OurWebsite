@@ -266,17 +266,12 @@ footer {
 
     var submusic = document.getElementById("submusic")  
   
-    var creditmusic = document.getElementById("creditmusic");
-  
     submusic.pause();
 
-    creditmusic.pause();
-  
    function openNav() {
       document.getElementById("mySidebar").style.width = "200px";
       document.getElementById("main").style.marginLeft = "0px";
       submusic.pause();
-      creditmusic.pause();
       mainmusic.play();
     }
 
@@ -305,7 +300,6 @@ footer {
      document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/Subjects.html";
      closeNav();
     mainmusic.pause();
-    creditmusic.pause();
     submusic.play();
     
    }
