@@ -249,6 +249,12 @@ footer {
 </audio>
 </div>
 
+<div hidden>
+<audio id="creditsmusic" autoplay loop>
+<source src="credits.mp3">
+</audio>
+</div>  
+
      <footer style="height:50px;text-align:center;padding:.5px">
      <p>© 2024 9REVISAR - All Rights Reserved</p>
      </footer>
@@ -259,12 +265,17 @@ footer {
     var mainmusic = document.getElementById("mainmusic"); 
 
     var submusic = document.getElementById("submusic");
-    submusic.mute();
+
+    var creditmusic = document.getElementById("creditmusic");
+  
+    submusic.pause();
+
+    creditmusic.pause();
   
    function openNav() {
       document.getElementById("mySidebar").style.width = "200px";
       document.getElementById("main").style.marginLeft = "0px";
-      submusic.mute();
+      submusic.pause();
       mainmusic.play();
     }
 
@@ -285,6 +296,7 @@ footer {
    document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/howto.html"
    closeNav();
    submusic.pause();
+   creditmusic.pause();
   }
   
     function subject() {  
@@ -293,9 +305,7 @@ footer {
      closeNav();
     mainmusic.pause();
     submusic.play();
-    submusic.unmute();
     
-
    }
 
   function todolist(){
@@ -324,6 +334,8 @@ footer {
    document.getElementById("myframe").src="https://9revisar.github.io/OurWebsite/Credits.html"
    closeNav();
    submusic.pause();
+   mainmusic.pause();
+   creditsmusic.play();
   }
 
   function init(){
