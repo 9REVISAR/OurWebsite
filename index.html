@@ -259,12 +259,12 @@ footer {
     var mainmusic = document.getElementById("mainmusic"); 
 
     var submusic = document.getElementById("submusic");
-    submusic.pause();
+    submusic.mute();
   
    function openNav() {
       document.getElementById("mySidebar").style.width = "200px";
       document.getElementById("main").style.marginLeft = "0px";
-      submusic.pause();
+      submusic.mute();
       mainmusic.play();
     }
 
@@ -293,6 +293,7 @@ footer {
      closeNav();
     mainmusic.pause();
     submusic.play();
+    submusic.unmute();
     
 
    }
